@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>React App</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    $$('#catalog_goods_block .g-rating-reviews').forEach(function (n) {
+      if (n.innerText.replace(/\W/g, '') > 1) {
+        console.log(n)
+      } else {
+        let elem = n.closest('.g-i-tile')
+        elem.parentNode.removeChild(elem);
+      }
+    })
+  </script>
+</body>
+
+</html>
+
