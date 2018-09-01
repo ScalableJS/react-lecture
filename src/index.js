@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { products } from './products'
 
-// import App from './App';
-import Category from './Category';
-const app = <Category />;
-ReactDOM.render(app, document.getElementById('root'));
+function Hello(props) {
+    const { product } =  props;
+    
+    return (<div>Hello {product.category}</div>);
+}
 
+console.log(products)
 
+render(<Hello product={products[0]} />, document.getElementById('root'))
