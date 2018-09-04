@@ -339,6 +339,41 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
+/***/ "./src/Button.js":
+/*!***********************!*\
+  !*** ./src/Button.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: D:/GIT/react-lecture/src/Button.js: Unexpected token (26:14)\\n\\n\\u001b[0m \\u001b[90m 24 | \\u001b[39m\\n \\u001b[90m 25 | \\u001b[39m    }\\n\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 26 | \\u001b[39m    addToCart \\u001b[33m=\\u001b[39m()\\u001b[33m=>\\u001b[39m {\\n \\u001b[90m    | \\u001b[39m              \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\n \\u001b[90m 27 | \\u001b[39m        let isAdded \\u001b[33m=\\u001b[39m \\u001b[33m!\\u001b[39m\\u001b[36mthis\\u001b[39m\\u001b[33m.\\u001b[39mstate\\u001b[33m.\\u001b[39misAdded \\n \\u001b[90m 28 | \\u001b[39m        \\u001b[36mthis\\u001b[39m\\u001b[33m.\\u001b[39msetState({\\n \\u001b[90m 29 | \\u001b[39m            isAdded\\u001b[33m:\\u001b[39m isAdded\\u001b[33m,\\u001b[39m\\u001b[0m\\n\");\n\n//# sourceURL=webpack://global/./src/Button.js?");
+
+/***/ }),
+
+/***/ "./src/Category.js":
+/*!*************************!*\
+  !*** ./src/Category.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Product = __webpack_require__(/*! ./Product */ \"./src/Product.js\");\n\nvar _Product2 = _interopRequireDefault(_Product);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Category(props) {\n    return props.products.map(function (product, index) {\n        return _react2.default.createElement(_Product2.default, { product: product, index: index });\n    });\n}\n\nexports.default = Category;\n\n//# sourceURL=webpack://global/./src/Category.js?");
+
+/***/ }),
+
+/***/ "./src/Product.js":
+/*!************************!*\
+  !*** ./src/Product.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Button = __webpack_require__(/*! ./Button */ \"./src/Button.js\");\n\nvar _Button2 = _interopRequireDefault(_Button);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Product(props) {\n    var product = props.product;\n\n\n    return _react2.default.createElement(\n        'div',\n        { className: 'product' },\n        _react2.default.createElement(\n            'h2',\n            { className: 'title' },\n            product.category,\n            ' : ',\n            product.name\n        ),\n        _react2.default.createElement(\n            'div',\n            null,\n            'Product info'\n        ),\n        _react2.default.createElement(\n            'div',\n            null,\n            'Price: ',\n            product.price\n        ),\n        _react2.default.createElement(_Button2.default, { stocked: product.stocked })\n    );\n}\n\nexports.default = Product;\n\n//# sourceURL=webpack://global/./src/Product.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -347,7 +382,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _products = __webpack_require__(/*! ./products */ \"./src/products.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Hello(props) {\n    var product = props.product;\n\n\n    return _react2.default.createElement(\n        'div',\n        null,\n        'Hello ',\n        product.category\n    );\n}\n\nconsole.log(_products.products);\n\n(0, _reactDom.render)(_react2.default.createElement(Hello, { product: _products.products[0] }), document.getElementById('root'));\n\n//# sourceURL=webpack://global/./src/index.js?");
+eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _products = __webpack_require__(/*! ./products */ \"./src/products.js\");\n\nvar _Category = __webpack_require__(/*! ./Category */ \"./src/Category.js\");\n\nvar _Category2 = _interopRequireDefault(_Category);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Hello() {\n    return _react2.default.createElement(_Category2.default, { products: _products.products });\n}\n\n(0, _reactDom.render)(_react2.default.createElement(Hello, null), document.getElementById('root'));\n\n//# sourceURL=webpack://global/./src/index.js?");
 
 /***/ }),
 

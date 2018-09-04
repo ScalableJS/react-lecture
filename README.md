@@ -30,11 +30,19 @@ Facebook
 ```
 npm init
 npm install --save react react-dom
-babel-preset-react
-babel-preset-env
-```
+npm install babel-preset-react
+npm install babel-preset-env
 
-Step 1 -> src/index.js
+npm i babel-core babel-loader babel-cli babel-preset-env babel-preset-react babel-preset-es2015 --save-dev
+```
+Инсталяция static Сервера
+browser -> http://127.0.0.1:8080/
+npm install --save-dev node-static (npm i -D node-static)
+
+node_modules\.bin\static
+Step 1 -> 
+index.html
+src/index.js
 ```
 function Hello (){
     return <div>Hello world</div>;

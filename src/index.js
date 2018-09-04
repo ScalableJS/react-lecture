@@ -1,13 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { products } from './products'
+import Category from './Category';
 
-function Hello(props) {
-    const { product } =  props;
+function Hello() {
+    return <Category products={products}/>
     
-    return (<div>Hello {product.category}</div>);
 }
 
-console.log(products)
+render(<Hello />, document.getElementById('root'));
 
-render(<Hello product={products[0]} />, document.getElementById('root'))
